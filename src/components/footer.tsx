@@ -24,6 +24,7 @@ export function Footer() {
               <li><Link href="/requests" className="hover:text-foreground">浏览需求</Link></li>
               <li><Link href="/requests/new" className="hover:text-foreground">发布需求</Link></li>
               <li><Link href="/categories" className="hover:text-foreground">分类浏览</Link></li>
+              <li><Link href="/customer-service" className="hover:text-foreground">AI客服</Link></li>
             </ul>
           </div>
 

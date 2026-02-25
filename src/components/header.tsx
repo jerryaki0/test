@@ -23,6 +23,7 @@ import {
   LogOut,
   Settings,
   Plus,
+  Bot,
 } from 'lucide-react';
 import { getStoredUser, clearStoredUser } from '@/lib/storage';
 
@@ -72,6 +73,13 @@ export function Header() {
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             分类浏览
+          </Link>
+          <Link
+            href="/customer-service"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground flex items-center gap-1"
+          >
+            <Bot className="h-4 w-4" />
+            AI客服
           </Link>
         </nav>
 
@@ -189,6 +197,13 @@ export function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               分类浏览
+            </Link>
+            <Link
+              href="/customer-service"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              AI客服
             </Link>
             {user && (
               <Link
