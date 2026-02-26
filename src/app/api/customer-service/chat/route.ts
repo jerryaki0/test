@@ -1,10 +1,10 @@
 import { NextRequest } from 'next/server';
 
-// Coze 智能体配置
+// Coze 智能体配置 - 从环境变量读取
 const COZE_CONFIG = {
-  token: 'pat_nrOjdpWaHjGAiMuABcTEPihVXIIzVblRq2lJz2qHdvJ4f6fzxDYCXJjOypI61tuW',
-  botId: '7568429249947041811',
-  baseUrl: 'https://api.coze.cn',
+  token: process.env.COZE_CUSTOMER_SERVICE_TOKEN || '',
+  botId: process.env.COZE_CUSTOMER_SERVICE_BOT_ID || '',
+  baseUrl: process.env.COZE_API_BASE_URL || 'https://api.coze.cn',
 };
 
 // 过滤掉内部消息
